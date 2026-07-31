@@ -69,7 +69,42 @@ body { background: radial-gradient(circle at 8% 3%,rgba(154,173,123,.11),transpa
 .service-grid b { color:#9dc9c4; }
 .conditions small,.service-grid p,.section-head.light>p { color:#d2cdc4; }
 .about { background:linear-gradient(135deg,#e4e7da,#c8d2bb); }
-.about-mark { color:var(--moss);opacity:.72; }
+.about-signature {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--moss);
+}
+.about-signature::before {
+  content: "";
+  position: absolute;
+  width: min(28vw, 360px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(82,106,78,.28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 24px rgba(255,253,248,.12);
+}
+.about-signature span {
+  position: relative;
+  z-index: 1;
+  font-family: var(--serif);
+  font-size: clamp(58px, 8vw, 118px);
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -.07em;
+}
+.about-signature small {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  padding-left: .28em;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .28em;
+}
 .contact { background:linear-gradient(145deg,var(--slate),#344e57); }
 .contact-form { background:var(--ivory); }
 .back-to-top { background:var(--espresso);border-color:var(--sage); }
@@ -79,6 +114,8 @@ footer { background:#292725; }
 @media(max-width:900px) {
   .hero { background:#faf8f2; }
   .hero-art.character-hero { min-height:560px; }
+  .about-signature { min-height:260px; }
+  .about-signature::before { width:230px; }
 }
 @media(max-width:560px) {
   .hero-art.character-hero { min-height:430px; }
