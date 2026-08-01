@@ -3,14 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f6f3ec">
   <title>ページが見つかりません｜Shiyuno</title>
+  <link rel="icon" type="image/jpeg" href="images/favicon/微笑み.jpg">
+  <link rel="apple-touch-icon" href="images/favicon/微笑み.jpg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="character-theme.css">
+  <link rel="stylesheet" href="subpages.css">
 </head>
-<body>
-  <main class="section" style="min-height:80vh;display:grid;place-content:center;text-align:center">
-    <p class="eyebrow">404 / NOT FOUND</p>
-    <h1 style="font-family:var(--serif);font-size:clamp(48px,8vw,100px);margin:0">ページが<br>見つかりません</h1>
-    <p><a class="button primary" href="index.html">トップへ戻る</a></p>
+<body class="subpage error-page">
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="トップへ"><span>Shiyuno</span><small>ILLUSTRATION</small></a>
+    <nav aria-label="メインナビゲーション">
+      <a href="index.html#works">Works</a><a href="index.html#services">Services</a><a href="index.html#pricing">Pricing</a><a href="index.html#about">About</a>
+      <a class="nav-cta" href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+  <main id="main" class="error-content">
+    <div class="error-number" aria-hidden="true">404</div>
+    <div class="error-message"><p class="eyebrow">PAGE NOT FOUND</p><h1>お探しのページが<br>見つかりません。</h1><p>URLが変更されたか、ページが削除された可能性があります。</p><a class="button primary" href="index.html">トップページへ戻る <span>→</span></a></div>
   </main>
+  <footer><a class="brand" href="index.html"><span>Shiyuno</span><small>ILLUSTRATION</small></a><div><a href="index.html#works">Works</a><a href="index.html#services">Services</a><a href="index.html#pricing">Pricing</a><a href="index.html#about">About</a><a href="privacy.html">Privacy</a></div><p>© 2026 Shiyuno. All rights reserved.<br>掲載作品の無断転載・再配布・改変を禁止します。</p></footer>
 </body>
 </html>

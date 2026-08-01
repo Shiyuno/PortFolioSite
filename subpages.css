@@ -1,0 +1,32 @@
+.subpage { min-height:100vh;background:var(--paper); }
+.subpage .site-header { position:fixed; }
+.policy-page { padding:180px clamp(20px,7vw,110px) 120px;display:grid;grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr);gap:clamp(50px,9vw,140px); }
+.subpage-heading { position:sticky;top:145px;align-self:start; }
+.subpage-heading h1 { margin:0;font-family:var(--serif);font-size:clamp(48px,6vw,82px);font-weight:500;line-height:1.25;letter-spacing:-.05em; }
+.subpage-heading>p:last-child { max-width:390px;margin-top:30px;font-size:15px;line-height:1.9;color:#666c66; }
+.policy-content { border-top:1px solid var(--line); }
+.policy-content section { display:grid;grid-template-columns:48px 1fr;gap:20px;padding:32px 4px;border-bottom:1px solid var(--line); }
+.policy-content section>span { padding-top:4px;font-size:12px;font-weight:700;color:var(--moss); }
+.policy-content h2 { margin:0 0 12px;font-family:var(--serif);font-size:24px;font-weight:500; }
+.policy-content p { margin:0;font-size:15px;line-height:2; }
+.policy-date { margin:24px 0 0;font-size:13px;color:#6d716b; }
+.error-content { min-height:calc(100vh - 92px);padding:150px clamp(20px,8vw,130px) 90px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6vw;overflow:hidden;background:radial-gradient(circle at 24% 45%,rgba(154,173,123,.2),transparent 28rem),var(--paper); }
+.error-number { font-family:var(--serif);font-size:clamp(170px,25vw,420px);font-style:italic;line-height:.75;letter-spacing:-.14em;color:rgba(82,106,78,.18); }
+.error-message { position:relative;z-index:1; }
+.error-message h1 { margin:0;font-family:var(--serif);font-size:clamp(42px,5vw,72px);font-weight:500;line-height:1.35;letter-spacing:-.04em; }
+.error-message>p:not(.eyebrow) { margin:26px 0;font-size:15px;line-height:1.9;color:#646963; }
+.error-message .button { gap:28px; }
+footer a[aria-current="page"] { color:#cbd8b5; }
+@media(max-width:900px) {
+  .policy-page { padding-top:130px;grid-template-columns:1fr;gap:55px; }
+  .subpage-heading { position:static; }
+  .error-content { min-height:100vh;padding-top:120px;grid-template-columns:1fr;gap:28px;text-align:center; }
+  .error-number { font-size:clamp(140px,46vw,260px); }
+  .error-message .button { width:100%;justify-content:space-between; }
+}
+@media(max-width:560px) {
+  .policy-page { padding:115px 20px 80px; }
+  .policy-content section { grid-template-columns:36px 1fr;gap:10px;padding:25px 0; }
+  .policy-content h2 { font-size:21px; }
+  .policy-content p { font-size:15px; }
+}
