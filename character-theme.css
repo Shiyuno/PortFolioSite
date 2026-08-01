@@ -29,6 +29,20 @@ body { background: radial-gradient(circle at 8% 3%,rgba(154,173,123,.11),transpa
   -webkit-backdrop-filter: blur(14px) saturate(.9);
 }
 .site-header nav a { color:var(--espresso);font-weight:600; }
+.header-socials { position:relative;margin-left:18px; }
+.header-socials summary { min-width:70px;height:38px;padding:0 13px;border:1px solid rgba(48,47,45,.25);border-radius:99px;display:flex;align-items:center;justify-content:center;gap:9px;color:var(--espresso);font-size:12px;font-weight:700;letter-spacing:.1em;cursor:pointer;list-style:none;transition:background-color .2s,color .2s,border-color .2s; }
+.header-socials summary::-webkit-details-marker { display:none; }
+.header-socials summary span { width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s; }
+.header-socials[open] summary span { transform:rotate(225deg) translate(-2px,-2px); }
+.header-socials summary:hover,.header-socials[open] summary { background:var(--espresso);border-color:var(--espresso);color:#fff; }
+.header-socials summary:focus-visible { outline:3px solid var(--teal);outline-offset:2px; }
+.header-social-menu { position:absolute;right:0;top:100%;width:230px;padding:12px 8px 8px;border:1px solid rgba(48,47,45,.14);border-radius:0 0 12px 12px;background:rgba(250,248,242,.98);box-shadow:0 16px 35px rgba(48,47,45,.16);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity .2s,visibility .2s,transform .2s; }
+.header-socials:hover .header-social-menu,.header-socials:focus-within .header-social-menu,.header-socials[open] .header-social-menu { opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0); }
+.header-social-menu a { min-height:48px;padding:8px 10px;border-radius:7px;display:flex;align-items:center;justify-content:space-between;color:var(--espresso);text-decoration:none;transition:background-color .18s,color .18s; }
+.header-social-menu a:hover { background:var(--espresso);color:#fff; }
+.header-social-menu a:focus-visible { outline:2px solid var(--teal);outline-offset:1px; }
+.header-social-menu b { font-size:13px; }
+.header-social-menu small { font-size:11px;opacity:.62; }
 .brand span { color: var(--espresso); }
 .nav-cta { background: rgba(255,253,248,.6); }
 .nav-cta:hover { background: var(--espresso); color: var(--white); }
@@ -160,6 +174,10 @@ footer { background:#292725;border-top:3px solid var(--sage);padding-top:54px;pa
 footer .brand span { color:#fffdf8;font-size:19px; }
 footer .brand small { color:#b8c9a0; }
 footer>div { justify-content:center;gap:8px 24px; }
+.footer-links { flex-direction:column;align-items:center; }
+.footer-pages,.footer-socials { display:flex;justify-content:center;gap:8px 24px;flex-wrap:wrap; }
+.footer-socials { padding-top:10px;border-top:1px solid rgba(255,255,255,.14); }
+.footer-socials a { color:#cbd8b5; }
 footer>div a { position:relative;color:#f3efe7;font-size:11px;font-weight:600;letter-spacing:.08em;padding:7px 0;transition:color .2s; }
 footer>div a::after { content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--sage);transform:scaleX(0);transform-origin:left;transition:transform .2s; }
 footer>div a:hover { color:#cbd8b5; }
@@ -206,6 +224,8 @@ footer p { color:#c8c2b9;font-size:10px;line-height:1.8; }
   .about-signature::before { width:230px; }
   footer { gap:26px; }
   footer>div { justify-content:flex-start; }
+  .footer-links { align-items:flex-start; }
+  .footer-pages,.footer-socials { justify-content:flex-start; }
 }
 @media(max-width:560px) {
   .hero-art.character-hero { min-height:430px; }
@@ -223,6 +243,10 @@ footer p { color:#c8c2b9;font-size:10px;line-height:1.8; }
   .pricing-tabs button span { font-size:15px; }
   .pricing-panel dl div { grid-template-columns:1fr;gap:3px;padding:15px 14px; }
   .pricing-panel dd { white-space:normal; }
+  .site-header nav { display:none; }
+  .header-socials { margin-left:auto; }
+  .header-socials summary { min-width:64px;height:36px;padding:0 11px; }
+  .header-social-menu { width:210px; }
 }
 
 /* Readability pass: keep supporting text comfortably legible on desktop and mobile. */
