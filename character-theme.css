@@ -35,6 +35,24 @@ body { background: radial-gradient(circle at 8% 3%,rgba(154,173,123,.11),transpa
   overflow:hidden;
   isolation:isolate;
 }
+.featured-work > img {
+  position:absolute;
+  inset:0;
+  z-index:1;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 8%;
+}
+.featured-work::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:linear-gradient(180deg,transparent 52%,rgba(27,34,31,.5) 100%);
+  pointer-events:none;
+}
+.featured-work .magic-ring,.featured-work .magic-star { z-index:3; }
 .hero-art.character-hero::before {
   content:"";position:absolute;width:48%;height:72%;left:27%;top:14%;border-radius:48% 52% 42% 58%;
   background:linear-gradient(155deg,rgba(249,247,239,.72),rgba(77,146,146,.1));
@@ -55,6 +73,17 @@ body { background: radial-gradient(circle at 8% 3%,rgba(154,173,123,.11),transpa
 .star-one { right:12%;top:14%;font-size:54px; }
 .star-two { left:12%;bottom:24%;font-size:27px;color:#a8d6d1; }
 .character-hero .art-caption { z-index:4;color:var(--white);background:rgba(48,47,45,.3);padding:11px 15px;border-left:3px solid #c2d2a0;backdrop-filter:blur(8px); }
+.work-visual.has-image::before,.work-visual.has-image::after { display:none; }
+.work-visual.has-image img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease; }
+.work-visual.has-image:hover img { transform:scale(1.025); }
+.work-visual.has-image span { position:relative;padding:4px 8px;background:rgba(48,47,45,.55);backdrop-filter:blur(4px); }
+.work-card:not(.tall) .work-visual.has-image img { object-position:center 24%; }
+.sd-sheet { min-height:0;padding:0;aspect-ratio:5665/2894;background:#fff; }
+.sd-sheet::before,.sd-sheet::after { display:none; }
+.sd-sheet a { position:absolute;inset:0;display:block; }
+.sd-sheet img { width:100%;height:100%;object-fit:contain;background:#fff; }
+.sd-sheet span { position:absolute;right:16px;top:16px;padding:4px 8px;background:rgba(48,47,45,.55);backdrop-filter:blur(4px); }
+.sd-work .work-info dl div:last-child { border-bottom:1px solid #eee; }
 
 .filters button.active { background:var(--moss); }
 .work-card { border:1px solid rgba(48,47,45,.07);box-shadow:0 10px 35px rgba(48,47,45,.05); }
