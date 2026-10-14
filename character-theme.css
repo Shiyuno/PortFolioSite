@@ -399,3 +399,10 @@ img,svg { max-width:100%; }
   footer { padding:44px 18px;gap:28px; }
   .footer-pages,.footer-socials { gap:6px 18px; }
 }
+
+/* Headings for the separate works groups. */
+.work-group-head { margin:0 0 22px; }
+.work-group-head .eyebrow { margin-bottom:5px;color:var(--moss); }
+.work-group-head h3 { margin:0;font-family:var(--serif);font-size:clamp(24px,3vw,34px);font-weight:500;line-height:1.35; }
+.commissioned-head { margin-top:76px; }
+.commission-grid .work-card:not(.tall) .work-visual.has-image img { object-position:center 60%; }
