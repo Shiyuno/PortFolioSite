@@ -117,7 +117,6 @@ body { background: radial-gradient(circle at 8% 3%,rgba(154,173,123,.11),transpa
 .sd-sheet a { position:absolute;inset:0;display:block; }
 .sd-sheet img { width:100%;height:100%;object-fit:contain;background:#fff; }
 .sd-sheet span { position:absolute;right:16px;top:16px;padding:4px 8px;background:rgba(48,47,45,.55);backdrop-filter:blur(4px); }
-.sd-work .work-info dl div:last-child { border-bottom:1px solid #eee; }
 
 .filters button.active { background:var(--moss); }
 .work-card { border:1px solid rgba(48,47,45,.07);box-shadow:0 10px 35px rgba(48,47,45,.05); }
@@ -404,5 +403,26 @@ img,svg { max-width:100%; }
 .work-group-head { margin:0 0 22px; }
 .work-group-head .eyebrow { margin-bottom:5px;color:var(--moss); }
 .work-group-head h3 { margin:0;font-family:var(--serif);font-size:clamp(24px,3vw,34px);font-weight:500;line-height:1.35; }
-.commissioned-head { margin-top:76px; }
+.commissioned-head { margin-top:0; }
+.personal-works-head { margin-top:104px; }
 .commission-grid .work-card:not(.tall) .work-visual.has-image img { object-position:center 60%; }
+.commission-grid .work-info dl { border-top:1px solid #eee;padding-top:5px; }
+.commission-grid .work-info dl dd,
+.works > .work-grid:not(.commission-grid) .work-info dl dd { display:block;margin:0;padding:5px 0;font-size:12px; }
+.works > .work-grid:not(.commission-grid) .work-info dl { border-top:1px solid #eee;padding-top:5px; }
+.works > .work-grid:not(.commission-grid) .work-info dl div { display:block;border-top:0;font-size:12px; }
+.works > .work-grid:not(.commission-grid) > .sd-work { grid-column:1 / -1; }
+.works .work-info dl .pixiv-result { display:block; }
+.works .work-info dl .pixiv-result dt { width:auto; }
+.sd-work .work-info { max-width:calc((100% - 16px) / 2); }
+.works .work-grid .work-card .work-visual { height:300px;min-height:300px; }
+.works .work-grid .work-card .sd-sheet { height:auto;min-height:0;aspect-ratio:5665 / 2894; }
+
+@media(max-width:900px) {
+  .sd-work .work-info { max-width:100%; }
+}
+
+@media(max-width:560px) {
+  .works .work-grid .work-card .work-visual { height:340px;min-height:340px; }
+  .works .work-grid .work-card .sd-sheet { height:auto;min-height:0; }
+}
